@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industrial Insights | Sewerage &amp; Structural</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#002204",
+                        "on-surface": "#191c1d",
+                        "on-primary-container": "#87a0d9",
+                        "tertiary-container": "#00410c",
+                        "primary-container": "#1a3668",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#48626e",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#021f29",
+                        "tertiary-fixed-dim": "#88d982",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#2c4678",
+                        "surface-tint": "#445e92",
+                        "primary-fixed-dim": "#aec6ff",
+                        "tertiary": "#002905",
+                        "outline": "#747780",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#62b260",
+                        "on-surface-variant": "#44474f",
+                        "on-background": "#191c1d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed": "#001a42",
+                        "inverse-primary": "#aec6ff",
+                        "primary": "#00204f",
+                        "secondary-fixed-dim": "#afcbd8",
+                        "surface-container-high": "#e7e8e9",
+                        "outline-variant": "#c4c6d0",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#304a55",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#4e6874",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#cbe7f5",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005312",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed": "#a3f69c",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#cbe7f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Work Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #00204f 0%, #1a3668 100%);
+        }
+        .text-editorial-spacing {
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-10 w-auto" data-alt="professional industrial logo for sewerage and structural services with bold blue and white color scheme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgL7vXFc7d4eNE04014rItXjuikQtaQjzJ1RlzTDACs306PuO8JJ_xksYYZvDju_CuZNi5vVuE384E1LXr-BSeNS1jHraMJR1fzBPC9OfI4W9-AyC5M5gRRVF0CoP55luC4dziTL0FPVyDrVLp0cF0BSp6Q0M2BVOzn-G7hPuIB47eDLdrUao320HvZYA--ymSKwdnsanwqT_1qvwgNHmZeFPLYw5tOaAB1VgDZkH9HhZDeSyY1TNceI7S4xSVcVsQFEB-rKqXCn6L"/>
+<span class="text-xl font-bold tracking-tighter text-[#1A3668] dark:text-white">Sewerage &amp; Structural</span>
+</div>
+<div class="hidden md:flex gap-8 font-['Work_Sans'] font-medium tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1A3668] transition-opacity" href="#">Services</a>
+<a class="text-[#1A3668] dark:text-blue-400 border-b-2 border-[#1A3668] pb-1 transition-opacity" href="#">Industry News</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1A3668] transition-opacity" href="#">Maintenance Tips</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1A3668] transition-opacity" href="#">Company Updates</a>
+</div>
+<button class="bg-[#1A3668] text-white px-6 py-2 rounded-lg font-medium hover:opacity-80 transition-all active:scale-95">
+                Request Quote
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="hero-gradient py-32 md:py-48 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-3/5 space-y-8">
+<span class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label px-4 py-1 rounded-full text-[10px] tracking-[0.1em] uppercase font-bold">Industry Intelligence</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-white text-editorial-spacing leading-[1.1]">
+                        Industrial Insights &amp; <br/>Maintenance Expertize
+                    </h1>
+<p class="text-body-lg text-primary-fixed-dim/80 max-w-xl text-lg leading-relaxed">
+                        Precision-engineered solutions and structural guidance from the industry's leading authority in sewerage systems and urban infrastructure.
+                    </p>
+</div>
+<div class="w-full md:w-2/5 flex justify-end relative">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/20 blur-3xl rounded-full"></div>
+<img alt="Structural Maintenance" class="relative rounded-xl shadow-2xl w-full h-[400px] object-cover" data-alt="industrial engineer in high visibility gear inspecting a concrete tunnel structure with technical equipment and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA4B70xbqsa_MVQ1fkXAQeBX3eqnZ41gl9iLaOvjkOh2xjXlWctFSw5VfspKg9VMYaPfMdKCH7uS9A3iWmiDqnq4SKIpxGoFPxHhzQASo45iM40-Fg5BOBhJmiYj73-ki8pXcbsgaeuhutjJ3oJpbeBVPEXolv8GIPgyyiPMwBWUDpe-fU7YbYstSQqc1vhPAOPS2aB96F4mI8nYC5--9jxeMUUi8h_dOC7imsJxAPJ3CVe2HI6YSJroCWVkdtA5pZqrHAZ0h6XwuW"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Post (Intentional Asymmetry) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container-lowest rounded-xl p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<img alt="Featured Technical Guide" class="w-full h-[500px] object-cover rounded-lg" data-alt="wide shot of heavy duty industrial pumping station with complex piping and blue machinery in a clean facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFCg-ZW-jiVg0X2CQflryWWBQUCcdS5kSNFD7fjvHsHH75r5OtAFyGDfS82_GwT35Sxfo2AN_W2v7AB4TTDM5d6_Yt3Fxkzt8ZgU5Tpl-oTFe65_My9wtPgXHeFc9sUFP9GqiKYP-C68Xb3KT6qS5TQQbk-8LBRkPp6iCwsxe08N11zpFykkYkmW9T-1xEuIPxtqhpz-bdpJYG3VdzJ5j1I6IUrXYtTFe42dR3EkFHvdVjYMGOCdfFrvQ2GzoKKaPssKtMWEQuGwI"/>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="flex items-center gap-3 font-label text-xs font-bold text-on-secondary-fixed-variant tracking-wider">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            FEATURED TECHNICAL GUIDE
+                        </div>
+<h2 class="text-4xl font-headline font-bold text-primary leading-tight">
+                            The Future of Structural Integrity: 2024 Sewerage Infrastructure Standards
+                        </h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                            An exhaustive deep-dive into the evolving landscape of urban sewerage management. We explore the intersection of IoT-enabled structural monitoring and traditional engineering excellence.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline decoration-tertiary-fixed decoration-4 underline-offset-4" href="#">
+                            Access Technical Guide
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Grid -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="space-y-4">
+<h2 class="text-3xl font-headline font-bold text-primary">Technical Resources</h2>
+<p class="text-on-surface-variant max-w-lg">Stay updated with the latest protocols, safety regulations, and structural news from our field experts.</p>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 md:pb-0 w-full md:w-auto">
+<button class="whitespace-nowrap px-6 py-2 bg-primary text-white rounded-full text-sm font-medium">All Topics</button>
+<button class="whitespace-nowrap px-6 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-primary-container hover:text-white transition-colors">Sewerage Maintenance Tips</button>
+<button class="whitespace-nowrap px-6 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-sm font-medium hover:bg-primary-container hover:text-white transition-colors">Safety Standards</button>
+</div>
+</div>
+<!-- Bento-inspired Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Post 1 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Maintenance Tips" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="industrial worker using high-tech handheld thermal camera to inspect electrical panel components in a structural facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbdbH36PKzEu6yCqJ2wzaKBKMPSSaZn5RNu2o3yQupZfy236odLYpb4SIYBqDDKi4oFlhVI0CBrJ179Kf6m0VtkEH2QNsEYZe6jyJnXtgu0RVzod01ZVeJVP0EvhbXa1hLPTCYbQYyuNOpdkOwug-ko3jlrmZYXU6Y41Iu48Sj2QnDJq5kgDBGc4w4YrC1BBh83W-9VPtdDpMTdi-h4g7Tjz_z79DYKIClE4ILCWw6__QFSAX-T5jYlGNaMtfNdHbgTSVshBU2XYV5"/>
+<span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">Sewerage Maintenance Tips</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">Preventative Drain Maintenance for High-Rise Structures</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Protecting vertical infrastructure requires a specific set of maintenance protocols that go beyond standard city sewerage.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Structural News" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of heavy duty reinforced steel bars in a construction foundation for a large scale structural project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXQTEyFQSEis06PzwoFUVZt12UDRaVWNeP9_-s-w-eafghXFtYwkm_wvsrO27qG4yFvwSvhBreJ4cLmEShqp8czACjTc96ZAMRrIiJn8XFaGeDun_KtxMmziow9GTDBofoCeg8OoaNa05yDQMUQbSGxMhdWBMlVXPGR1FsWsaaCEKpPrrAPqSh9v0zVYwjUA5WdgtwQf2hJpJeK40DTF-JodmX0iKTq5eJwJWUpir2n6vyyHCe5C_ZL8XLtJTDtfiiTGEV5Qe5pubm"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full">Structural Integrity News</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">New Alloy Standards for Underground Pipe Support</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Recent developments in metallurgical science have introduced new corrosion-resistant standards for structural bracing.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Safety Standards" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="bright orange industrial safety helmet and high-visibility vest resting on a blueprint at a construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPUeFndy4KZt-bZ8ligKczZBC83LErtXv6WE7NvcksWc0x1WXNQbYset_Da8sLXmi0NzCyWJ6IWrpd3k1rkBUWyZNHckyt3xO7SshqFaTcOKilBbS6jF-30d4pw3INUobcaDyOZNH3xXaiqfSXzE2tAm00OXP4UzmrBaMNVhWsQbhxOHP3-mmIeuLtmjTuVnGzf6DXSc2b1d2-xtNkyIEvzSZKRWSD5eiC1BkS8soOMK3xm2yccagEnWXLb_lWddCWJ66a2V9JKRd7"/>
+<span class="absolute top-4 left-4 bg-error-container text-on-error-container text-[10px] font-bold px-3 py-1 rounded-full">Safety Standards</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">Confined Space Entry: Updated Safety Protocols 2024</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Ensuring team safety during subterranean inspections is our highest priority. View the updated entry requirements.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 4 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Company Announcements" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="clean modern industrial office space with glass walls and professional atmosphere where engineers plan projects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh0y90HWNbu9uu5ojF2ysqTnIRo86lpU1yz9FcoafhaN3ykBb-TcJATw8ZrfXoQ7l9JhVMiWU_DPt0z67mtatnkeV28uFm_0OMzUr_i4lJO18eppcn6T4S4F4L9UaetzR7HNQhn9xFGb_o73veLvSJrWeaiOHQB5wwWKcmryMDreOR8OBdkvpOXeB6af_OAzUAGEuiHxJA05bymYZ14DHh2t8bpnKe1kvAo4SIRgpYwcSt_m5LlXpembvcxL-fMIwAfrbAhIV4TcKd"/>
+<span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full">Company Announcements</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">Sewerage &amp; Structural Expands Fleet to Northern Region</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">To better serve our expanding client base, we've deployed 12 new specialized structural maintenance units.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 5 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Technical News" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="dramatic lighting on massive industrial turbine blades in a warehouse setting showing structural detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr10HMOf2Ao6gvUK35G0LAFxPc289CofGas9aEKa053OuC0xUVFUPyt9iwRZw7UG26n8M_0S1fDBO901TM1-zCGHfT7gRcnLynx-rNpTo_dRaKQ0BgSqCiUjOF-ARsMd_bdNtxNb-n1aj9cK64hadNlCYhVRYdjibrqJJ6-Gmw2GxiM-2wWxx7OuOkUSiI2Ei96xHUjzn2csv9TSntbu7h0U_Q93JgnMILY0hHDzLMcjUr081q9cPieU4yrUgyhmIIHZkHXr3cHcWK"/>
+<span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-3 py-1 rounded-full">Innovation</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">Trenchless Technology: Modernizing Urban Repair</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Minimizing surface disruption while maintaining maximum structural load capacity in urban centers.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Post 6 -->
+<div class="group bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+<div class="relative overflow-hidden rounded-lg mb-6">
+<img alt="Expertise" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="industrial blue sky background with tall construction crane silhouetted against soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-u92M-piBWiDAUZCnHxrLgVzN8tvHt3hrk-nReoRLJhiTB8cOz4ITDSnh4yIpAjx9yafcgeJGTiBA_db_JvMebVPP6P3lK2TVQZAn3aBhj-ni-fk7bw9SFqRv7TzE4Zxe5Mkz21_j2aulMzvaIsPoTaCn3St_y5zrRjvvYiUFRJWGwnI7dYQdSjV3St3qZKQiU1Ylk8ccJ-OTnHIoXGiR6ZxYyitbTjGmRNlbD1Mc3LtxusF0ubbEC3jqgNU-vtNYKQ4k8ChTZg0J"/>
+<span class="absolute top-4 left-4 bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full">Case Study</span>
+</div>
+<div class="space-y-3 px-2">
+<h3 class="text-xl font-headline font-bold text-primary group-hover:text-primary-fixed-variant">Restoring Victorian Sewers with Modern Polymer Lining</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">How our structural team preserved historical masonry while meeting 21st-century hydraulic pressure standards.</p>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-bold pt-4 group-hover:gap-3 transition-all" href="#">
+                                Read More
+                                <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Subscription (Glassmorphism & Gradients) -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto hero-gradient rounded-3xl p-12 md:p-20 relative overflow-hidden text-center shadow-2xl">
+<!-- Abstract Design Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-tertiary-fixed opacity-5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 blur-[100px] rounded-full"></div>
+<div class="relative z-10 space-y-8 max-w-2xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-white text-editorial-spacing">Professional News Directly To Your Inbox</h2>
+<p class="text-primary-fixed-dim/80 text-lg">Join 5,000+ industry professionals receiving our monthly technical digest on structural safety and sewerage maintenance.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-white/10 border-0 focus:ring-2 focus:ring-tertiary-fixed text-white placeholder-white/40 rounded-lg px-6 py-4 backdrop-blur-md" placeholder="Your professional email" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed font-bold px-8 py-4 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap" type="submit">
+                            Subscribe Now
+                        </button>
+</form>
+<p class="text-[10px] font-label text-white/40 uppercase tracking-[0.2em]">Secure. Technical. Unsubscribe anytime.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t-0 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<span class="text-lg font-black text-[#1A3668] dark:text-white">Sewerage &amp; Structural</span>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs text-center md:text-left">Building and maintaining the foundations of modern infrastructure since 1994.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1A3668] dark:hover:text-blue-300 transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1A3668] dark:hover:text-blue-300 transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1A3668] dark:hover:text-blue-300 transition-colors" href="#">Contact Support</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1A3668] dark:hover:text-blue-300 transition-colors" href="#">Careers</a>
+</div>
+</div>
+<div class="py-6 border-t border-slate-200/50 dark:border-slate-800/50 text-center">
+<p class="text-slate-400 text-xs">© 2024 Sewerage &amp; Structural. Built for Reliability.</p>
+</div>
+</footer>
+</body></html>

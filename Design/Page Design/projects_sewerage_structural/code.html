@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f8f9fa",
+                    "tertiary-container": "#00410c",
+                    "secondary-fixed-dim": "#afcbd8",
+                    "on-primary-fixed-variant": "#2c4678",
+                    "on-primary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#304a55",
+                    "on-surface": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#62b260",
+                    "tertiary-fixed": "#a3f69c",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-bright": "#f8f9fa",
+                    "surface-variant": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "surface-tint": "#445e92",
+                    "on-tertiary-fixed": "#002204",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#aec6ff",
+                    "on-surface-variant": "#44474f",
+                    "tertiary-fixed-dim": "#88d982",
+                    "primary-fixed-dim": "#aec6ff",
+                    "outline": "#747780",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary": "#002905",
+                    "on-primary-container": "#87a0d9",
+                    "primary-container": "#1a3668",
+                    "on-background": "#191c1d",
+                    "secondary-fixed": "#cbe7f5",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary": "#48626e",
+                    "secondary-container": "#cbe7f5",
+                    "on-tertiary-fixed-variant": "#005312",
+                    "primary": "#00204f",
+                    "on-secondary-container": "#4e6874",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#021f29"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Work Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #00204f 0%, #1a3668 100%);
+        }
+        .tonal-shift {
+            background: linear-gradient(to bottom, #f3f4f5, #e7e8e9);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-blue-900 dark:text-blue-50 font-headline">
+            STRUCTURAL AUTHORITY
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-blue-900 dark:text-blue-400 font-bold border-b-2 border-green-400 font-headline tracking-tight" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-colors font-headline tracking-tight" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-colors font-headline tracking-tight" href="#">Sectors</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-colors font-headline tracking-tight" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-blue-200 transition-colors font-headline tracking-tight" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold scale-95 active:opacity-80 transition-transform shadow-lg shadow-primary/20">
+            Request Quote
+        </button>
+</div>
+</nav>
+<main class="min-h-screen">
+<header class="relative overflow-hidden pt-24 pb-16 px-6 lg:px-24 hero-gradient text-white">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-3xl text-center md:text-left mx-auto md:mx-0">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[0.75rem] font-bold tracking-widest uppercase mb-6">Project Portfolio</span>
+<h1 class="text-5xl md:text-7xl font-black font-headline tracking-tighter leading-none mb-8">
+                        Industrial <br/>Precision In Action
+                    </h1>
+<p class="text-xl text-primary-fixed leading-relaxed max-w-xl mx-auto md:mx-0 opacity-90">
+                        A comprehensive showcase of structural integrity, sewerage maintenance, and civil engineering excellence across Malaysia's leading commercial and educational sectors.
+                    </p>
+</div>
+<div class="hidden lg:block text-right">
+<div class="text-6xl font-black text-tertiary-fixed-dim/30">2024</div>
+<div class="text-sm font-bold tracking-widest uppercase">Archive of Excellence</div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img alt="" class="w-full h-full object-cover" data-alt="faint architectural blueprints overlaid on a dark industrial texture with high contrast shadows and structural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVxH09F3LCULHVLTfsTy22dN9gyhzh6zGjy78anazJ3STXR4pWbb3GkFVsyVmdoladfeZg7SJ1Vi9Zto8cNGTaG43AaPTsOmuTvVZn_DLeAK7De7_a4LfQBP8DXadgiL8rtmhnRsT8fKeZNZqcWH-YihVXHL1TlBEfg2hLvgTM2bzMP9LpvS9J0r2eeyFxAmGkLmtzGhd3AxBPjd-KBsnppjPj0SgiSUVRwQggqWVFKo9OTkjUZlv6F4gieMYqwtSq-cBO1Qkd4jCq"/>
+</div>
+</header>
+<section class="py-24 px-6 lg:px-24">
+<div class="max-w-7xl mx-auto space-y-32">
+<article class="flex flex-col items-center text-center">
+<div class="max-w-3xl mb-12">
+<div class="flex items-center justify-center gap-4 mb-4">
+<span class="w-12 h-px bg-tertiary-container"></span>
+<span class="text-sm font-bold tracking-widest uppercase text-on-surface-variant font-label">Retail Sector</span>
+<span class="w-12 h-px bg-tertiary-container"></span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold font-headline text-primary mb-6">Tesco Stores</h2>
+<h3 class="text-xl font-semibold text-secondary mb-4">STP Maintenance &amp; System Audit</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                        Ensuring regulatory compliance and operational efficiency for Sewage Treatment Plants (STP) across multiple retail locations. Our team conducted deep system audits and scheduled preventive maintenance to prevent disruptions in high-traffic environments.
+                    </p>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Compliance Testing</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Preventive Maintenance</span>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBsx_M0Ypv1iqTNVOvBSZw_v5rhXEN4aVjHH6h-qKc0Le6Zqgl-sAspXbQiRJK9LjokmkrwdAgGV7c4AEGixld6XwWNyZZP9RrBYeoI4qrYJqM1SEX-rj8H1kJYEbHS1PQ6guZTLtSDeVI61xwJrxVwPlxpSv3V16zR1LgtIAVlBurU0dMbB5M46SwSGaKkKpAz6akc4WslvapCbqnhjxtF9MCtLh6VThMTlm4f4VrVJ1XTRHJH47LLZ4L6RHPEoxyJASfOlDe_7Q2"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQXxWCZXfTSJ8sh403NU_NwweUZ12qZybxh3aJwz46Q6I3Los-nNIc8swY-eOuN-rQiUibL7AtoRyvmwkupAYgtz2OS6S2j0SKDrwtcv-T2dS_IwY85pWjUailfn8PmKEX4Z2kNamS6HLl_1RP91kTzHu6jA_MgHvUrJkgYwdwul54Zknt_96UfVZoRvVoRsYoN7JKO29VRthNSb1VeJcBYMCJgagqhKHcAs7w8sp6j-hhGtg0K_jtcPXq6RbX9fsJavXhN3YFmNKF"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSQXe5-e0R_7raMpoO86C3M6caTsaSb_YYUv05NXsfLvHE2tTpEZe-EUyyR6JVgdMR3cbIyx7obK-O8ayAlHeWyqd20HLk9p1Dw8A8YqMIgS6bAbkBDPFKYNy6cr-lR-MwGRl65FAhrCElJw3yJms98UgcpOxApFyJ1PFFWbHTKI4GdwIK8S_IZi8hR2ogF7TxF5n3dG4CcAdaN6HEHPXxpzWEAljLLn7T3nKrPWzH4H5Wv4wZDQuP_b4tCXL1fbx9HuojtGYpKPEY"/>
+</div>
+</div>
+</article>
+<article class="flex flex-col items-center text-center">
+<div class="max-w-3xl mb-12">
+<div class="flex items-center justify-center gap-4 mb-4">
+<span class="w-12 h-px bg-tertiary-container"></span>
+<span class="text-sm font-bold tracking-widest uppercase text-on-surface-variant font-label">Commercial Hubs</span>
+<span class="w-12 h-px bg-tertiary-container"></span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold font-headline text-primary mb-6">Aeon Big</h2>
+<h3 class="text-xl font-semibold text-secondary mb-4">Manhole Blockage &amp; Sewer Line Clearing</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                        Rapid response and resolution for large-scale manhole blockages. Utilizing high-pressure water jetting and structural diagnostics to ensure waste-water infrastructure remains clear under peak demand periods.
+                    </p>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Emergency Response</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Water Jetting</span>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsX-sfNZptaWtMAfVpoOjd6zB_RQUu5N7w6fmP5bqVI0vH6tXRLlBujZUPK9-2zhfUCSY-5c7R0JTHD-5YLAL-sFQacWfGjUeAO5leZskr_Vb1StdrKKUjzrpm7AmzXJYZgAao25FpVgGIfE2IoeyH1qQ2DvGLXGNXpkPdg_1DBG2TAdLxgl2ITyNuTOO3Cjr8U7X1V8D4s_vgsGGwmWHYjksQ0cGdDtesGcH_zdU_ekQGQlzBakzxpHNdgmo1zkBfTDigRIPquSu4"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmRHt4DctgjAiOT0HB7ap4wa49wVPWLMySGvpX9QQNgQewV4rsUKGkpOBT58bjRbPGGDyskbxKVxO8jQ-__ThuutnPC4JkBf9QfNi9Pv2v7tZj9p904uuV1LouVN6isoXILwqNoqvKpgV9u7qfxm232hDhGO5B-AnPQ1cW2xrvo6MJhWUZZp1Fb7mNvISNCA7clWIcBoIUBymcSC3aWgqk5640SNaGftI_nlYKMTOHgt2OwPFv6mYUeqrYK4huTrSQVeUtfcYn2133"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH_2wUO3ZcUl0p8aLNa41DNFcqGdW7UykKHGuckvHcqfOHDKJT9A1hUrnqOy-_e5cqHrBPZQrAftjstoo1bNJ0Xfz5eHUcGA-I2RfbO4Y9EqJC6rS54KUWGi3P4ZKgduHk77D5gcUWs_nplmiC31jFezg9MNUm6VpMDL48WxY6eWBh9wsMt4ZqM8TNqV-dGTjGcWg8dOHPyzQlLusr2ulYsT1UtqTuA7daSSmzD4xzceKXZatpOe6M3KuJ2StSkA22SjP1jl3M69Yg"/>
+</div>
+</div>
+</article>
+<article class="flex flex-col items-center text-center">
+<div class="max-w-3xl mb-12">
+<div class="flex items-center justify-center gap-4 mb-4">
+<span class="w-12 h-px bg-tertiary-container"></span>
+<span class="text-sm font-bold tracking-widest uppercase text-on-surface-variant font-label">Education Sector</span>
+<span class="w-12 h-px bg-tertiary-container"></span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold font-headline text-primary mb-6">Sri KDU Schools</h2>
+<h3 class="text-xl font-semibold text-secondary mb-4">Structural Septic Tank Construction</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                        A major structural engineering project involving the design and construction of a high-capacity new septic tank system. Focused on long-term sustainability and minimal environmental impact for a large campus population.
+                    </p>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Civil Construction</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Structural Design</span>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDecvGMgy899dV33AM91rRmt3lY29pzNbzAHD8DOJBGTAOTj8vl9TPdh9Beo0eUJ1d8PCDBMZA-nknEWGunotAfG1cVwPTMRvfeb6nDuc5Y1LtKU31_B2RXPmB00PzLl6j9ymzXhy-vA5x4J0IkVcyFtUhMM2OGH0gr_roQwrE7In5uVgNWphQooKs4ZohGKtGy2Zj4PoG-hC8mq2aAuFyU0VMexjr1ZSQA-v5i8v0XwsoNOEUaZUNAlVynhYrYblZyMyj5PcFrKn0B"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBziDFozH3Fjk349ucYJx6y1EllL41IR4qppV-XiiCy63gOWb7tqkpMg-s8ODnbGTl_vPAVHezs8mj7E4tTm_IbYWqio23Tk2U_Fc25_4kGy2UAfIk3GW9r__WJEQfMny2OMn3Dt8wuOWQzyqt3Wji5QP5gzoP2f6vwUfzZ4c2vt3ZBkmKPU9kfZlp8vbbm56ynztW2parASR7e9FfcZ3gdqutEjXhRu2KV4tMR4n7KIzD4Y-SQ3LGGJPXYYIA2G82YqGlIIyJ57WK"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7kBr3kjtUv7ovUFvGLXfW6RcgAwH-LPpK9EztVJfncU0t3jBv78z08B8jnZNejEovsTAxxQnYnl122DDC_urGqNSKKGsFr5HU5tDMQr7dmUJI01PXh55zL2IcUjRgiim00FMUB_-c-d4BoxAruzFyl5TRrQ2OQRGlBCnRX1KplTPAOX7phOef-zi5egAaCNj0oKatk-lMhdDrcJkAI9TXLPNNtgygHiIGnEl610NKnyTtHn_cbaLjsWGVDMsjrLncPPsneUtZgibf"/>
+</div>
+</div>
+</article>
+<article class="flex flex-col items-center text-center">
+<div class="max-w-3xl mb-12">
+<div class="flex items-center justify-center gap-4 mb-4">
+<span class="w-12 h-px bg-tertiary-container"></span>
+<span class="text-sm font-bold tracking-widest uppercase text-on-surface-variant font-label">General Maintenance</span>
+<span class="w-12 h-px bg-tertiary-container"></span>
+</div>
+<h2 class="text-4xl md:text-5xl font-bold font-headline text-primary mb-6">Commercial Facilities</h2>
+<h3 class="text-xl font-semibold text-secondary mb-4">High-Frequency Toilet Blockage Resolution</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                        Handling complex blockage issues in commercial restroom facilities. Our team employs specialized endoscopic cameras and mechanical clearing tools to identify and resolve recurring issues without damaging internal finishes.
+                    </p>
+<div class="flex flex-wrap justify-center gap-3">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Endoscopic Inspection</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold text-on-surface">Facility Management</span>
+</div>
+</div>
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRbri4rzaLEGGCYIoxeRxGeHJlcjHxEg1eibv_Sv-VeWu7zJ2Dv_BYNEv3Qnvg6yPlqZYStZU_0FIgCePA6NbDHJwcsPObGVKsUOOYYbVI3Pb0gi-RoeMwEc3aRux0Er6SDZ8VOgUc-cb_LbRgltO-D1PSWsaW6bPi5wRiZGxJBRwXx2Cl-fKXvu5wSxi82BBWelsymXUE2Ifv8p1u8RZ2k4xCwHxfc3BYm2PP1ZYsX-VaM-MV6sNZwQ_nigDceT6OYyDded320j9d"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHj2DKcY5T75nTkwTYd-vI65sg3BwnEgnkK6aRf2-ojnrzgnbd4RuKdSsCfwNPrpk9v7jVlbisYeKbk_vo74jXXq7WfIckowEm3LbclupmklkuJbogqu2Pop2gB3i5IjXo-KyhCFtqUIPdcJ1WJ-DM3zuur5kOQM0ZS9aiItQe5d11PjK8XJC0mYvC2kKa6OJuvnwEbGpUIaBPyshntb1zIHyQObXy4AgSzxz7Dk9xYp1P2EF-_gAPTlcKhTPk8bbh92O2jDIsnY_V"/>
+</div>
+<div class="overflow-hidden rounded-xl bg-surface-container-low group aspect-[4/3]">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEpN_q5mvX1kDJVAXm_JHifC5P_WoAXsvmyKrP_yV3OdYSCeIdomWedluedNlLlbbbNH3lxyy9BBIIoqr8kWIrSl_F2rvGlEQp_hf1cdH4ubOgTuOS12_8zm4_FEhj5N2h7zAeVemUHahv4KYxheaQAIZ8lI_udVK33u7AQ1dmybzv0uHPq3xHtwf-PK2rYHgLz3Kgu7z_RYfLJgGVcmeOtSy4xDWCyaI49jUw-8Y_M_lzQsNXF5zd1LvoBVQ-UwL8L7yXsjKfJhOx"/>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="bg-surface-container-high py-24 px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl font-black font-headline text-primary mb-6 tracking-tight">Need Structural Authority?</h2>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+                From routine maintenance to major structural overhauls, our team provides the precision engineering your infrastructure deserves.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-opacity">
+                    Request a Project Audit
+                </button>
+<button class="bg-white border border-outline-variant text-primary px-8 py-4 rounded-lg font-bold hover:bg-surface transition-colors">
+                    View Service Rates
+                </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-100 dark:bg-slate-950 w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-blue-900 dark:text-blue-200 font-headline uppercase tracking-widest">
+                Structural Authority
+            </div>
+<p class="text-slate-500 dark:text-slate-500 font-inter text-[0.75rem] uppercase tracking-widest leading-loose">
+                © 2024 Industrial Engineering Co. All rights reserved. Structural Authority and Precision Engineered Infrastructure are registered trademarks.
+            </p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-4 items-center md:justify-end">
+<a class="text-slate-500 dark:text-slate-500 font-inter text-[0.75rem] uppercase tracking-widest hover:text-blue-700 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-opacity duration-300" href="#">Safety Standards</a>
+<a class="text-slate-500 dark:text-slate-500 font-inter text-[0.75rem] uppercase tracking-widest hover:text-blue-700 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-opacity duration-300" href="#">Certifications</a>
+<a class="text-slate-500 dark:text-slate-500 font-inter text-[0.75rem] uppercase tracking-widest hover:text-blue-700 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-opacity duration-300" href="#">Careers</a>
+<a class="text-slate-500 dark:text-slate-500 font-inter text-[0.75rem] uppercase tracking-widest hover:text-blue-700 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-opacity duration-300" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Industrial Core Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f8f9fa",
+                      "tertiary-fixed": "#a3f69c",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c4c6d0",
+                      "primary": "#00204f",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#cbe7f5",
+                      "primary-fixed-dim": "#aec6ff",
+                      "tertiary": "#002905",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#88d982",
+                      "on-tertiary-container": "#62b260",
+                      "surface-container": "#edeeef",
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary-fixed-dim": "#afcbd8",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-tint": "#445e92",
+                      "on-primary-container": "#87a0d9",
+                      "tertiary-container": "#00410c",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#1a3668",
+                      "on-secondary-fixed-variant": "#304a55",
+                      "inverse-surface": "#2e3132",
+                      "surface-container-low": "#f3f4f5",
+                      "on-primary-fixed-variant": "#2c4678",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-secondary-fixed": "#021f29",
+                      "surface-variant": "#e1e3e4",
+                      "surface-bright": "#f8f9fa",
+                      "on-secondary-container": "#4e6874",
+                      "on-primary-fixed": "#001a42",
+                      "on-tertiary-fixed-variant": "#005312",
+                      "on-surface": "#191c1d",
+                      "outline": "#747780",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#002204",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#cbe7f5",
+                      "inverse-primary": "#aec6ff",
+                      "surface": "#f8f9fa",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#d9dadb",
+                      "primary-fixed": "#d8e2ff",
+                      "error": "#ba1a1a",
+                      "secondary": "#48626e",
+                      "on-surface-variant": "#44474f",
+                      "on-background": "#191c1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Work Sans"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #00204f 0%, #1a3668 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/20 shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center gap-3">
+<img alt="Industrial Core Logo" class="h-8 w-auto" data-alt="minimalist architectural logo for an engineering company with geometric shapes in deep navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3pLpyJ-H9YENtw7WKsEi6708W2M7qpYtR4pKkMinTl_vQX129Qqj8shuEq6wqR6f2FUFDhDvWXeLHuTokErEpQD9ohuAvbEQWcFDQu-SXk1vEzdVg5R5IN5c_pLhuThyDbJLX7KKMP1wXyWRMK6j-AV5NVsoJ3vsQ71Q5qAe1JJ2f-2ivv0iorZMBW71vdLicYdtdjXkbd9pJ3xSsPva7S4Jam61TCeRXgpbjhkNBR8qyZvZvRYolouZDC4mY84tgpYPUAvNno356"/>
+<span class="text-2xl font-black text-blue-900 dark:text-white uppercase tracking-tighter font-headline">Industrial Core</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-blue-900 font-headline font-semibold tracking-tight transition-all duration-300" href="#">Home</a>
+<a class="text-slate-500 hover:text-blue-900 font-headline font-semibold tracking-tight transition-all duration-300" href="#">Services</a>
+<a class="text-slate-500 hover:text-blue-900 font-headline font-semibold tracking-tight transition-all duration-300" href="#">Case Studies</a>
+<a class="text-slate-500 hover:text-blue-900 font-headline font-semibold tracking-tight transition-all duration-300" href="#">About Us</a>
+<a class="text-blue-900 border-b-2 border-green-400 pb-1 font-headline font-semibold tracking-tight" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center gap-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-headline font-semibold transition-transform scale-95 active:scale-100">
+                    Request Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative hero-gradient py-24 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="Industrial Facility" class="w-full h-full object-cover" data-alt="wide shot of a modern industrial complex with steel structures and cooling towers under a dramatic dusk sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fagbvPBKzvxkfp3SqQPDMF6mUm9QYl5fT-fhc37pvvuwWvi4caTA_0PKv53zQBX79ZszjZ0I-BYhh1X4iGgrs95D_UBT18M4Zot-OX_F-Z5b-iQwFpGOxJuRbdh2WemcQfT_mKab8IR7GncE32eD7hlsixAByZDUP_QSmvKb51oB1N79GcID1HanoBgqWLQHF_tX2Ov8D1xkwuwvsefOrMyN1MvgFQrRGjU3CGpJ9q-Kfobxr3N4_KA-yhYqNDUZ0TbZ-izy5YaX"/>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold tracking-widest uppercase mb-6 font-label">Global Support</span>
+<h1 class="text-5xl lg:text-7xl font-black text-white font-headline leading-tight tracking-tighter mb-8">
+                        Contact Us
+                    </h1>
+<p class="text-xl text-primary-fixed-dim leading-relaxed font-body">
+                        Expert structural engineering and industrial maintenance at your service. Our specialized teams provide round-the-clock support for high-stakes infrastructure and industrial systems.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Main Content (Form + Sidebar) -->
+<section class="max-w-7xl mx-auto px-6 -mt-16 relative z-20 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Contact Form Section -->
+<div class="lg:col-span-8">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl p-8 lg:p-12">
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-primary font-headline tracking-tight mb-2">Project Inquiry</h2>
+<p class="text-on-surface-variant">Fill out the form below and an engineering consultant will contact you within 2 business hours.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline font-label">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline font-label">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="j.doe@enterprise.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline font-label">Phone Number</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="+1 (000) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline font-label">Service Type</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all appearance-none">
+<option>Desludging/Grease Tank</option>
+<option>Sludge Tank Maintenance</option>
+<option>High-Pressure Water Jet Rodding</option>
+<option>Pump Repairs</option>
+<option>Grease Trap Cleaning</option>
+<option>Sewer &amp; Grease Pipe Cleaning</option>
+<option>Wiring &amp; Renovations</option>
+<option>Waterproofing</option>
+<option>Road Works</option>
+<option>Hygiene Services</option>
+<option>Emergency Response</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-outline font-label">Project Brief/Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="Describe your maintenance or structural requirements..." rows="5"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-lg font-headline font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all flex items-center justify-center gap-3 group" type="submit">
+                                    Send Inquiry
+                                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Sidebar Information -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Urgent Contact Card -->
+<div class="bg-surface-container-high rounded-xl p-8 border-l-4 border-tertiary-fixed">
+<div class="flex items-center gap-4 mb-6">
+<div class="bg-tertiary-fixed/20 p-3 rounded-full">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-primary">Immediate Dispatch</h3>
+</div>
+<p class="text-on-surface-variant mb-4 font-body leading-relaxed">For emergency structural failures or sewerage overflows, call our 24/7 hotline:</p>
+<a class="text-2xl font-black text-primary font-headline hover:text-primary-container transition-colors tracking-tight" href="tel:+18005550199">
+                            +1 (800) 555-0199
+                        </a>
+</div>
+<!-- Direct Contact Methods -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">chat</span>
+<div>
+<h4 class="font-bold text-primary font-headline">WhatsApp Support</h4>
+<p class="text-on-surface-variant text-sm mb-2">Real-time technician chat</p>
+<button class="text-tertiary-fixed-dim bg-tertiary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-tighter">Start Chat</button>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h4 class="font-bold text-primary font-headline">HQ Location</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                    Industrial Park North, Suite 400,<br/>
+                                    Engineering Way, Chicago, IL 60611
+                                </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">mail</span>
+<div>
+<h4 class="font-bold text-primary font-headline">Email Direct</h4>
+<p class="text-on-surface-variant text-sm">support@industrialcore.com</p>
+</div>
+</div>
+</div>
+<!-- Visual Accent Card -->
+<div class="relative rounded-xl overflow-hidden h-64 shadow-xl group">
+<img alt="Engineering Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of industrial gears and machinery with precise metal finishes and dramatic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnlz23HELEpfDaPFexeYHXtsH_LDh0LJK1jO8EfRNykosWmmx1vqYv9ZHSSgVinzRBxpc-o9zEZX5MAl28a2IsCMlillT7pylk3sCa-peaKlHZW0ryvuoasRbsLtAHLiEvnjx6H3N5pWXtBtq_KaI0M0j16S04OYkYjczAJXcuaP780YZS5IdUHzQKEDaNewnvm2PVklTlPW6g8vfpdGb6rAWtwbDNZehjzsjuOYeaFmXj8ciLkmtOgglyQhOh3RVgbh2Hzfp_j6Pj"/>
+<div class="absolute inset-0 bg-primary/40 flex items-end p-6">
+<p class="text-white text-sm font-semibold tracking-wide uppercase">Precision Engineering Since 1994</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="space-y-6">
+<div class="text-xl font-black text-blue-900 dark:text-blue-200 font-headline uppercase tracking-tighter">Industrial Core</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Providing structural authority and engineered precision across the global industrial landscape.
+                </p>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6 font-headline uppercase text-xs tracking-widest">Global Network</h5>
+<ul class="space-y-4 font-body text-sm text-slate-500">
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">North America Hub</li>
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">EMEA Operations</li>
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Asia Pacific Center</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6 font-headline uppercase text-xs tracking-widest">Service Portal</h5>
+<ul class="space-y-4 font-body text-sm text-slate-500">
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Safety Standards</li>
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Technical Specs</li>
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Service History</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-6 font-headline uppercase text-xs tracking-widest">Legal &amp; Support</h5>
+<ul class="space-y-4 font-body text-sm text-slate-500">
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Legal</li>
+<li class="hover:text-blue-700 transition-colors cursor-pointer underline-offset-8 hover:underline">Contact Support</li>
+<li class="text-green-600 dark:text-green-400 font-bold">Safety Portal</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-slate-500 text-sm font-label tracking-wide">
+                © 2024 Industrial Core Services. Structural Authority in Engineering.
+            </div>
+<div class="flex gap-6 text-slate-400">
+<span class="material-symbols-outlined hover:text-primary cursor-pointer">link</span>
+<span class="material-symbols-outlined hover:text-primary cursor-pointer">youtube_activity</span>
+</div>
+</div>
+</footer>
+</body></html>

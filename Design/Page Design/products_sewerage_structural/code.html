@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | Industrial Apex</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Work+Sans:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#88d982",
+                    "surface-container-high": "#e7e8e9",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed": "#002204",
+                    "on-surface-variant": "#44474f",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "secondary": "#48626e",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed": "#a3f69c",
+                    "on-secondary-container": "#4e6874",
+                    "secondary-fixed-dim": "#afcbd8",
+                    "tertiary-container": "#00410c",
+                    "on-primary-fixed": "#001a42",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#aec6ff",
+                    "primary": "#00204f",
+                    "on-primary-fixed-variant": "#2c4678",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#021f29",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#cbe7f5",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary-container": "#87a0d9",
+                    "inverse-primary": "#aec6ff",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-tint": "#445e92",
+                    "on-secondary-fixed-variant": "#304a55",
+                    "primary-container": "#1a3668",
+                    "outline-variant": "#c4c6d0",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-container": "#62b260",
+                    "tertiary": "#002905",
+                    "secondary-container": "#cbe7f5",
+                    "on-tertiary-fixed-variant": "#005312",
+                    "primary-fixed": "#d8e2ff",
+                    "on-background": "#191c1d",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "outline": "#747780",
+                    "on-surface": "#191c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Work Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 29, 0.06);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #00204f 0%, #1a3668 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-blue-950 dark:text-white uppercase tracking-tighter font-['Work_Sans']">
+                Industrial Apex
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Work_Sans']">
+<a class="text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1 font-bold tracking-tight" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Industries</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:flex items-center px-4 py-2 bg-slate-50 dark:bg-slate-900/50 rounded-xl transition-all hover:bg-slate-100">
+<span class="material-symbols-outlined mr-2 text-slate-500">search</span>
+<span class="text-slate-500 font-medium">Search products...</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold tracking-tight active:scale-95 duration-200 btn-gradient">
+                    Request Quote
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<header class="relative h-[614px] min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Industrial Maintenance Vehicle" class="w-full h-full object-cover" data-alt="Powerful industrial maintenance truck parked in a modern facility, soft cinematic lighting with cool blue tones and sharp highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpf5xgUWfvTyUHtekZd4hhfs0skq0th6oDqltj_HYUXGG67oiWNeTXJP2jnq4MSFPWVPW7Ei0lVaKtfYOvdjNzXARWuZCVYhiMCH9Dl9hZXx_g4zVblNg59IVfm_2f57ILFbMnW_OBSoCTA8nZzutOVzchWzsetjGH346cg2J9MNRmX7jto4GtjNGyfdbOdXpiVSbNrg_GfkemR8-jQq6kSqW40sLNnE3NMffP18TwW73gOs20G1yL5p39oaWejrrKpf7D_5BcMVJ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-container/40"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto px-6 w-full">
+<div class="max-w-2xl">
+<h1 class="text-white font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-6">
+                        Products
+                    </h1>
+<p class="text-on-primary-container font-body text-xl md:text-2xl leading-relaxed font-light">
+                        Engineered for durability. Designed for safety. <br/>Our bio-maintenance solutions redefine industrial standards.
+                    </p>
+</div>
+</div>
+</header>
+<!-- Product Sections -->
+<section class="max-w-screen-2xl mx-auto px-6 py-24 space-y-32">
+<!-- Bio Enzyme Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative">
+<div class="absolute -inset-4 bg-surface-container-high rounded-xl -z-10 transform rotate-1"></div>
+<img alt="Bio Enzyme Container" class="w-full h-auto rounded-xl editorial-shadow" data-alt="Commercial 5 Liter Bio Enzyme liquid container with professional industrial labeling, clean studio lighting on white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJIK5jIACbaOKCnke0-07VZd_PXg1E8kIXEKvWXXGU_5_KAWTYwy6iFSRfuWHVm2KUqTMinZfSl1KY9gUr99kiJNX5FAimKH2nKB-3nBuquIPQTxR9m0v76li-TAE3oqpx4943j0dvO6QOYFSes0zrM1z5HxLdtHhZldp_RFy_IY__XR-V8ULS2UM6BANAnVexHz6yMjuvKk0RZoI0q-lRP9hziQQi32Gjfi7Uz7qM7pwIHx9nXzhElgFyTRaESs3Dapt7tS-mIRht"/>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full font-label text-xs font-bold tracking-widest uppercase">Maintenance Excellence</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-primary leading-tight">
+                            Bio Enzyme For Grease Trap Treatment
+                        </h2>
+<div class="flex items-center space-x-4 text-on-surface-variant">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mr-2" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-medium">Eco-Friendly</span>
+</div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant"></div>
+<div class="font-medium">5 Liter Container</div>
+</div>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed">
+                            Super microbial bacteria formula designed for high-performance grease decomposition. Eco-friendly solution proudly manufactured in Malaysia for heavy-duty industrial applications.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+<div class="flex items-start p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium">Non-corrosive to plumbing systems</span>
+</div>
+<div class="flex items-start p-4 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary mr-3">check_circle</span>
+<span class="text-sm font-medium">Eliminates foul odors at the source</span>
+</div>
+</div>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-4 rounded-xl font-bold tracking-tight hover:opacity-90 transition-all flex items-center shadow-md">
+                            Request Quote
+                            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hand Sanitizer Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label text-xs font-bold tracking-widest uppercase">Safe &amp; Certified</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-primary leading-tight">
+                            Biosanitizer – Alcohol Free <br/>Instant Hand Sanitizer
+                        </h2>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center px-3 py-1 bg-surface-container-highest rounded-lg text-xs font-bold">ISO 9001:2015</div>
+<div class="flex items-center px-3 py-1 bg-surface-container-highest rounded-lg text-xs font-bold">HACCP CERTIFIED</div>
+</div>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed">
+                            A moisturizing, no-rinse solution that provides instant protection without the harshness of alcohol. Specifically formulated to be safe for children while maintaining industrial-grade effectiveness.
+                        </p>
+<ul class="space-y-3 font-medium text-on-surface-variant">
+<li class="flex items-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mr-3">verified</span>
+                                Quick drying &amp; Non-sticky formula
+                            </li>
+<li class="flex items-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mr-3">verified</span>
+                                Skin-safe moisturizing ingredients
+                            </li>
+<li class="flex items-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mr-3">verified</span>
+                                Kids and child safe application
+                            </li>
+</ul>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold tracking-tight btn-gradient hover:scale-[1.02] transition-all flex items-center shadow-lg">
+                            Inquire Now
+                            <span class="material-symbols-outlined ml-2">info</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity rounded-xl"></div>
+<img alt="Biosanitizer Product" class="w-full h-auto rounded-xl editorial-shadow" data-alt="Close up of Biosanitizer alcohol-free hand sanitizer bottle in a modern clinical setting with soft natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwbc4x5ywkEhSQ1__vMoizR_paf24ArIqt7eyz6cD5VsCK7kfBnJc1_k6dVMe2fOZYXCS8kP7oz5-R-yfKXaRGOnB2J2o0yYPqdJRXysiE0W_2qxWcKUHBctNUWyuxHHDnsvKlpJcvyXDxyjnNQzX3XhCbChwbtAcNX1YgOfOuxMDebPQfOn4pX8SE7bwN0Rq99rcY6aNxHW0Rf_HDqbKyHOfwX2gw4AtoO3QvJpldqsdJqsfP3DNsBk0eMJahIvEnOOFnO3oX7h_z"/>
+</div>
+</div>
+</div>
+<!-- Disinfectant Liquid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative p-8 bg-surface-container-low rounded-2xl">
+<img alt="Bio Stericlean Container" class="w-full h-auto rounded-lg editorial-shadow" data-alt="Bulk 5 Liter pack of Bio Stericlean non-toxic disinfectant liquid with technical spec labels, high-end commercial product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX2llE7Ry_V1FZz1WfXXM5dRDatXQsM6Rz_WvX5_CGPZBYjxv1xlOba3fQfGR3F8qBYAXZhcVJyxCG9bh6u9rjjHi76Jn_F3iQKNlG5uPs3gNvQWCm3ZnBm6SU6_SoX0mNV1HrhSs7D07iT9GWvQTZ2iXa-KCctSEyIKDgqw1UEs8Xzmco_5-UVL5FSHyZelQHpscrmtaA5E6z7shyazBh_roW4sGPPDjj7v7u_O_3MUCIijZPmDuzBXII7bftanOmYxrE0r8umYyr"/>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full font-label text-xs font-bold tracking-widest uppercase">Biological Control</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-primary leading-tight">
+                            Bio Stericlean Non-Toxic Disinfectant Liquid
+                        </h2>
+<div class="grid grid-cols-2 gap-2 text-xs font-bold text-on-surface-variant opacity-70">
+<span>ISO 9001 REGISTERED</span>
+<span>HACCP COMPLIANT</span>
+</div>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed">
+                            The ultimate 5 Liter pack for professional sanitation. Our Bio Stericlean formula is completely non-toxic and biodegradable, ensuring safety for both operators and the environment without compromising on sterilization power.
+                        </p>
+<div class="space-y-4">
+<div class="p-5 border border-outline-variant/20 rounded-xl bg-white">
+<h4 class="font-bold text-primary mb-1">Non-Toxic Formula</h4>
+<p class="text-sm text-on-surface-variant">Safe for multi-surface application including food preparation areas.</p>
+</div>
+<div class="p-5 border border-outline-variant/20 rounded-xl bg-white">
+<h4 class="font-bold text-primary mb-1">Biodegradable</h4>
+<p class="text-sm text-on-surface-variant">Decomposes naturally without harmful residue or environmental impact.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-4 rounded-xl font-bold tracking-tight hover:opacity-90 transition-all flex items-center justify-center shadow-md">
+                                Request Quote
+                            </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold tracking-tight hover:bg-primary hover:text-white transition-all flex items-center justify-center">
+                                Technical Specs
+                                <span class="material-symbols-outlined ml-2">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="max-w-screen-2xl mx-auto px-6 pb-24">
+<div class="bg-primary-container rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-tertiary-fixed/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -ml-32 -mb-32"></div>
+<div class="relative z-10">
+<h2 class="text-white font-headline text-4xl md:text-6xl font-black mb-8 tracking-tighter">
+                        Ready to Optimize Your Infrastructure?
+                    </h2>
+<p class="text-on-primary-container max-w-2xl mx-auto text-lg mb-12">
+                        Consult with our technical experts today to find the perfect biological maintenance solution for your industrial facility.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Request Custom Quote
+                        </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+                            View All Solutions
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 px-6 border-t-0 font-['Inter'] text-sm tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-bold text-blue-950 dark:text-white mb-4">Industrial Apex</div>
+<p class="text-slate-500 mb-4 leading-relaxed">
+                    © 2024 Industrial Apex Services. <br/>Structural Authority in Bio-Maintenance.
+                </p>
+</div>
+<div class="flex flex-col space-y-3">
+<div class="font-bold text-blue-900 dark:text-blue-400 mb-2">Legal</div>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Safety Data Sheets</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Technical Specifications</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-3">
+<div class="font-bold text-blue-900 dark:text-blue-400 mb-2">Navigation</div>
+<a class="text-blue-900 dark:text-blue-400 font-semibold" href="#">Products</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Solutions</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Industries</a>
+<a class="text-slate-500 dark:text-slate-500 hover:text-blue-900 dark:hover:text-white transition-colors underline decoration-blue-900/30" href="#">Resources</a>
+</div>
+<div class="flex flex-col space-y-3">
+<div class="font-bold text-blue-900 dark:text-blue-400 mb-2">Contact</div>
+<div class="text-slate-500">Kuala Lumpur, Malaysia</div>
+<div class="text-slate-500">contact@industrialapex.com</div>
+<div class="flex space-x-4 pt-2">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors cursor-pointer">public</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors cursor-pointer">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
