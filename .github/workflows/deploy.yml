@@ -29,55 +29,53 @@ jobs:
           COMPANY_EMAIL: ${{ secrets.COMPANY_EMAIL }}
           COMPANY_NAME: ${{ secrets.COMPANY_NAME }}
 
-      - name: Backup public_html via cPanel API
+      - name: Backup and rotate public_html via FTP
         run: |
           DATETIME=$(date +"%Y%m%d_%H%M%S")
-          echo "Backing up public_html to public_html_${DATETIME}..."
-          RESPONSE=$(curl -s -k --max-time 30 \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            "https://structuresewerage.com:2083/execute/Fileman/rename" \
-            --data-urlencode "from-dir=/home/${{ secrets.CPANEL_USERNAME }}" \
-            --data-urlencode "from-filename=public_html" \
-            --data-urlencode "to-filename=public_html_${DATETIME}")
-          echo "cPanel API response: $RESPONSE"
-          echo "$RESPONSE" | python3 -c "
-          import sys, json
-          raw = sys.stdin.read().strip()
-          if not raw:
-            print('WARNING: Empty response from cPanel API - port 2083 may be blocked')
-            sys.exit(0)
-          try:
-            r = json.loads(raw)
-            if r.get('status') == 1:
-              print('Backup OK')
-            else:
-              print(f'Backup API error: {r}')
-              sys.exit(1)
-          except json.JSONDecodeError:
-            print(f'WARNING: Non-JSON response: {raw[:200]}')
-            sys.exit(1)
-          "
+          echo "Creating backup folder public_html_${DATETIME} via FTP..."
+          python3 - <<EOF
+          import ftplib, os, sys
 
-      - name: Create fresh public_html folder via cPanel API
-        run: |
-          RESPONSE=$(curl -s -k --max-time 30 \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            "https://structuresewerage.com:2083/execute/Fileman/mkdir" \
-            --data-urlencode "path=/home/${{ secrets.CPANEL_USERNAME }}" \
-            --data-urlencode "name=public_html")
-          echo "cPanel API response: $RESPONSE"
-          echo "$RESPONSE" | python3 -c "
-          import sys, json
-          raw = sys.stdin.read().strip()
-          if not raw:
-            print('WARNING: Empty response from cPanel API')
-            sys.exit(0)
-          try:
-            r = json.loads(raw)
-            print('Created public_html OK' if r.get('status') == 1 else f'mkdir failed: {r}')
-          except json.JSONDecodeError:
-            print(f'WARNING: Non-JSON response: {raw[:200]}')
-          "
+          host = "structuresewerage.com"
+          user = "${{ secrets.FTP_USERNAME }}"
+          pwd  = "${{ secrets.FTP_PASSWORD }}"
+          dt   = "${DATETIME}"
+
+          def list_dir(ftp, path):
+              items = []
+              ftp.cwd(path)
+              ftp.retrlines("LIST", items.append)
+              return items
+
+          def ftp_copy_dir(ftp, src, dst):
+              try:
+                  ftp.mkd(dst)
+              except:
+                  pass
+              ftp.cwd(src)
+              entries = []
+              ftp.retrlines("NLST", entries.append)
+              for name in entries:
+                  src_path = f"{src}/{name}"
+                  dst_path = f"{dst}/{name}"
+                  try:
+                      ftp.cwd(src_path)
+                      ftp_copy_dir(ftp, src_path, dst_path)
+                      ftp.cwd(src)
+                  except:
+                      import io
+                      buf = io.BytesIO()
+                      ftp.retrbinary(f"RETR {name}", buf.write)
+                      buf.seek(0)
+                      ftp.storbinary(f"STOR {dst_path}", buf)
+
+          with ftplib.FTP(host) as ftp:
+              ftp.login(user, pwd)
+              backup_name = f"public_html_{dt}"
+              print(f"Copying public_html -> {backup_name}")
+              ftp_copy_dir(ftp, "/public_html", f"/{backup_name}")
+              print(f"Backup complete: {backup_name}")
+          EOF
 
       - name: Deploy to public_html via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
