@@ -37,6 +37,7 @@ jobs:
           echo "Downloading public_html for backup..."
           lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" ftp://structuresewerage.com <<LFTP
           set ftp:passive-mode true
+          set ssl:verify-certificate false
           set net:timeout 30
           set net:max-retries 3
           mirror --parallel=5 /public_html /tmp/public_html_backup
@@ -45,6 +46,7 @@ jobs:
           echo "Uploading backup as public_html_${DATETIME}..."
           lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" ftp://structuresewerage.com <<LFTP
           set ftp:passive-mode true
+          set ssl:verify-certificate false
           set net:timeout 30
           set net:max-retries 3
           mirror --reverse --parallel=5 /tmp/public_html_backup /public_html_${DATETIME}
