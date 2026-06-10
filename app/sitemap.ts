@@ -1,4 +1,6 @@
 import { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 import { COMPANY_URL } from "@/lib/constants";
 import { services } from "@/data/services";
 import { projects } from "@/data/projects";
