@@ -24,6 +24,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          COMPANY_EMAIL: ${{ secrets.COMPANY_EMAIL }}
+          COMPANY_NAME: ${{ secrets.COMPANY_NAME }}
 
       - name: Backup public_html via cPanel API
         run: |
