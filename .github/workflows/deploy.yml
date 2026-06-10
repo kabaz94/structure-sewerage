@@ -29,53 +29,28 @@ jobs:
           COMPANY_EMAIL: ${{ secrets.COMPANY_EMAIL }}
           COMPANY_NAME: ${{ secrets.COMPANY_NAME }}
 
-      - name: Backup and rotate public_html via FTP
+      - name: Backup public_html via FTP
         run: |
           DATETIME=$(date +"%Y%m%d_%H%M%S")
-          echo "Creating backup folder public_html_${DATETIME} via FTP..."
-          python3 - <<EOF
-          import ftplib, os, sys
-
-          host = "structuresewerage.com"
-          user = "${{ secrets.FTP_USERNAME }}"
-          pwd  = "${{ secrets.FTP_PASSWORD }}"
-          dt   = "${DATETIME}"
-
-          def list_dir(ftp, path):
-              items = []
-              ftp.cwd(path)
-              ftp.retrlines("LIST", items.append)
-              return items
-
-          def ftp_copy_dir(ftp, src, dst):
-              try:
-                  ftp.mkd(dst)
-              except:
-                  pass
-              ftp.cwd(src)
-              entries = []
-              ftp.retrlines("NLST", entries.append)
-              for name in entries:
-                  src_path = f"{src}/{name}"
-                  dst_path = f"{dst}/{name}"
-                  try:
-                      ftp.cwd(src_path)
-                      ftp_copy_dir(ftp, src_path, dst_path)
-                      ftp.cwd(src)
-                  except:
-                      import io
-                      buf = io.BytesIO()
-                      ftp.retrbinary(f"RETR {name}", buf.write)
-                      buf.seek(0)
-                      ftp.storbinary(f"STOR {dst_path}", buf)
-
-          with ftplib.FTP(host) as ftp:
-              ftp.login(user, pwd)
-              backup_name = f"public_html_{dt}"
-              print(f"Copying public_html -> {backup_name}")
-              ftp_copy_dir(ftp, "/public_html", f"/{backup_name}")
-              print(f"Backup complete: {backup_name}")
-          EOF
+          echo "Installing lftp..."
+          sudo apt-get install -y lftp -q
+          echo "Downloading public_html for backup..."
+          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" ftp://structuresewerage.com <<LFTP
+          set ftp:passive-mode true
+          set net:timeout 30
+          set net:max-retries 3
+          mirror --parallel=5 /public_html /tmp/public_html_backup
+          bye
+          LFTP
+          echo "Uploading backup as public_html_${DATETIME}..."
+          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" ftp://structuresewerage.com <<LFTP
+          set ftp:passive-mode true
+          set net:timeout 30
+          set net:max-retries 3
+          mirror --reverse --parallel=5 /tmp/public_html_backup /public_html_${DATETIME}
+          bye
+          LFTP
+          echo "Backup complete: public_html_${DATETIME}"
 
       - name: Deploy to public_html via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
