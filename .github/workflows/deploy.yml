@@ -25,12 +25,31 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to cPanel via FTP
+      - name: Backup public_html via cPanel API
+        run: |
+          DATETIME=$(date +"%Y%m%d_%H%M%S")
+          echo "Backing up public_html to public_html_${DATETIME}..."
+          curl -s -k -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
+            "https://structuresewerage.com:2083/execute/Fileman/rename" \
+            --data-urlencode "from-dir=/home/${{ secrets.CPANEL_USERNAME }}" \
+            --data-urlencode "from-filename=public_html" \
+            --data-urlencode "to-filename=public_html_${DATETIME}" \
+            | python3 -c "import sys,json; r=json.load(sys.stdin); print('Backup OK' if r.get('status')==1 else f'Backup failed: {r}')"
+
+      - name: Create fresh public_html folder via cPanel API
+        run: |
+          curl -s -k -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
+            "https://structuresewerage.com:2083/execute/Fileman/mkdir" \
+            --data-urlencode "path=/home/${{ secrets.CPANEL_USERNAME }}" \
+            --data-urlencode "name=public_html" \
+            | python3 -c "import sys,json; r=json.load(sys.stdin); print('Created public_html OK' if r.get('status')==1 else f'mkdir failed: {r}')"
+
+      - name: Deploy to public_html via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: structuresewerage.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: /public_sewerage/
+          server-dir: /public_html/
           dangerous-clean-slate: false
