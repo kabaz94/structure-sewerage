@@ -71,15 +71,15 @@ $htmlBody = "
 <p style='margin-top:24px;font-size:11px;color:#aaa;'>Sent from structuresewerage.com contact form</p>
 </body></html>";
 
-// Use sendmail with -f flag to set envelope sender (avoids SPF issues on cPanel)
-$additionalParams = '-f' . $from;
-$headers  = "From: Structure Sewerage <$from>\r\n";
-$headers .= "Reply-To: $name <$email>\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "X-Mailer: PHP/" . PHP_VERSION;
+// Admin notification — From is the visitor's email so GoDaddy accepts it as inbound
+$adminParams  = '-f' . $email;
+$adminHeaders  = "From: $name <$email>\r\n";
+$adminHeaders .= "Reply-To: $name <$email>\r\n";
+$adminHeaders .= "MIME-Version: 1.0\r\n";
+$adminHeaders .= "Content-Type: text/html; charset=UTF-8\r\n";
+$adminHeaders .= "X-Mailer: PHP/" . PHP_VERSION . "\r\n";
 
-$sent = mail($to, $subject, $htmlBody, $headers, $additionalParams);
+$sent = mail($to, $subject, $htmlBody, $adminHeaders, $adminParams);
 
 if (!$sent) {
     http_response_code(500);
