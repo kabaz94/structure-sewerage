@@ -8,7 +8,7 @@ export const COMPANY_DESCRIPTION =
 export const COMPANY_EMAIL = process.env.COMPANY_EMAIL || "info@structuresewerage.com";
 export const COMPANY_PHONE = "+60 16-285 6266";
 export const COMPANY_EMERGENCY_PHONE = "+60 16-285 6266";
-export const COMPANY_WHATSAPP = "+60 16-285 6266";
+export const COMPANY_WHATSAPP = "+60162856266";
 export const COMPANY_ADDRESS = {
   street: "516, Jalan Air Jernih, Air Panas, Setapak",
   city: "Kuala Lumpur",
@@ -16,5 +16,5 @@ export const COMPANY_ADDRESS = {
   postcode: "53200",
   country: "Malaysia",
 };
-export const COMPANY_FOUNDED_YEAR = 1994;
+export const COMPANY_FOUNDED_YEAR = 1993;
 export const COMPANY_URL = "https://www.structuresewerage.com";

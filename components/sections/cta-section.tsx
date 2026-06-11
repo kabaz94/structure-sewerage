@@ -40,10 +40,22 @@ export function CTASection({
       <div className={cn("py-24 px-6 lg:px-8 max-w-7xl mx-auto relative z-10")}>
         <div className="flex flex-col md:flex-row items-center justify-between gap-16">
           <FadeUp className="md:w-1/2">
-            <h2 className="text-5xl font-black font-headline tracking-tighter text-primary mb-6">
+            <h2
+              className={cn(
+                "text-5xl font-black font-headline tracking-tighter mb-6",
+                variant === "dark" ? "text-white" : "text-primary"
+              )}
+            >
               {title}
             </h2>
-            <p className="text-lg text-on-surface-variant mb-10 leading-relaxed">
+            <p
+              className={cn(
+                "text-lg mb-10 leading-relaxed",
+                variant === "dark"
+                  ? "text-primary-fixed-dim"
+                  : "text-on-surface-variant"
+              )}
+            >
               {description}
             </p>
             {/* <div className="flex flex-col sm:flex-row gap-4">

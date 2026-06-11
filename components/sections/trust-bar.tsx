@@ -4,7 +4,7 @@ import { FadeUp } from "@/components/shared/fade-up";
 const trustItems = [
   {
     icon: Clock,
-    title: "12/7 Emergency Response",
+    title: "24/7 Emergency Response",
     description: "Rapid deployment anytime, anywhere.",
   },
   {

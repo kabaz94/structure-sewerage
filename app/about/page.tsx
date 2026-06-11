@@ -64,22 +64,24 @@ export default function AboutPage() {
 
           <FadeUp className="lg:w-1/2 w-full grid grid-cols-2 gap-4" delay={0.15}>
             <div className="bg-surface-container-high rounded-xl overflow-hidden aspect-[4/5] relative group">
-              <div className="w-full h-full bg-primary/10 flex items-center justify-center">
-                <span className="text-primary/40 font-headline font-black text-6xl">
-                  {COMPANY_FOUNDED_YEAR}
-                </span>
-              </div>
+              <img
+                src="/images/history.png"
+                alt="The Beginning"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/40" />
               <div className="absolute bottom-4 left-4 text-white font-headline font-bold text-sm">
                 The Beginning
               </div>
             </div>
             <div className="bg-surface-container-high rounded-xl overflow-hidden aspect-[4/5] mt-12 relative group">
-              <div className="w-full h-full bg-tertiary-fixed/20 flex items-center justify-center">
-                <span className="text-tertiary-container/40 font-headline font-black text-6xl">
-                  {currentYear}
-                </span>
-              </div>
-              <div className="absolute bottom-4 left-4 text-primary font-headline font-bold text-sm">
+              <img
+                src="/images/modern.png"
+                alt="The Future"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/40" />
+              <div className="absolute bottom-4 left-4 text-white font-headline font-bold text-sm">
                 The Future
               </div>
             </div>

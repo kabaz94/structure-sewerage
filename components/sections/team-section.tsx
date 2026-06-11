@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Badge } from "@/components/shared/badge";
 import { FadeUp } from "@/components/shared/fade-up";
 
@@ -10,12 +9,10 @@ export function TeamSection() {
           <div className="relative">
             <div className="absolute -inset-4 bg-tertiary-fixed/20 rounded-3xl -z-10" />
             <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
+              <img
                 src="/images/Team.png"
                 alt="Our professional engineering and maintenance team"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

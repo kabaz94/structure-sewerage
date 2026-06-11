@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const {
     register,
@@ -31,28 +30,29 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setStatus("submitting");
-    setErrorMessage("");
+
+    // Honeypot check — silently succeed to fool bots
+    if (data.honeypot && data.honeypot.length > 0) {
+      setStatus("success");
+      reset();
+      return;
+    }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/mailer.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
       if (!response.ok) {
-        throw new Error(result.error || "Something went wrong");
+        throw new Error("Failed to send message");
       }
 
       setStatus("success");
       reset();
-    } catch (error) {
+    } catch {
       setStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : "Failed to send message. Please try again."
-      );
     }
   };
 
@@ -246,7 +246,9 @@ export function ContactForm() {
         {status === "error" && (
           <div className="flex items-center gap-3 p-4 bg-error-container/20 rounded-lg text-error">
             <AlertCircle className="w-5 h-5 shrink-0" />
-            <p className="text-sm">{errorMessage}</p>
+            <p className="text-sm">
+              Failed to send message. Please try again or contact us directly via phone.
+            </p>
           </div>
         )}
 

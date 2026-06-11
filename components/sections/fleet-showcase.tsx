@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FadeUp } from "@/components/shared/fade-up";
 
 export function FleetShowcase() {
@@ -34,12 +33,10 @@ export function FleetShowcase() {
             </div>
             <div className="flex-1 w-full">
               <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-xl">
-                <Image
+                <img
                   src="/images/lori.png"
                   alt="Company lorry"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
